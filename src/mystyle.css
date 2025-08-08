@@ -1,0 +1,70 @@
+:root {
+    --primary: #010a5e;
+    --primary-light: #010d78;
+    --secondary: #FFCC00;
+    --paragraph: #c0c0c0;
+    --white: #fff;
+    --black: #000;
+    --green: #007936;
+    --red: #cc3433;
+    --dark: #000;
+    --dark-light: #171717;
+}
+body {
+  color: var(--white);
+  background: var(--primary);
+}
+
+@keyframes scaleShakeDropPause {
+  0% {
+    transform: scale(1) rotate(0deg) translateX(0);
+  }
+  10% {
+    transform: scale(1.1) rotate(0deg) translateX(0); 
+  }
+  25% {
+    transform: scale(1.1) rotate(4deg) translateX(5px); 
+  }
+  35% {
+    transform: scale(1.1) rotate(-4deg) translateX(-5px); 
+  }
+  45% {
+    transform: scale(1.1) rotate(4deg) translateX(5px); 
+  }
+  55% {
+    transform: scale(1.1) rotate(-4deg) translateX(-5px); 
+  }
+  65% {
+    transform: scale(1.1) rotate(0deg) translateX(0); 
+  }
+  75% {
+    transform: scale(1) rotate(0deg) translateX(0); 
+  }
+  100% {
+    transform: scale(1) rotate(0deg) translateX(0); 
+  }
+}
+
+.animate-scale-shake-drop-pause {
+  animation: scaleShakeDropPause 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.img-hover{
+  animation: upDown 2s ease-in-out infinite;
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.tabs__menu ul li:hover , 
+.tabs__menu ul li.active
+{
+  background-color: var(--secondary);
+  color: var(--black);
+}
