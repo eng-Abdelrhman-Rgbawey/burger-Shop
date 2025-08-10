@@ -72,13 +72,13 @@ tabsMenu.forEach((tab) => {
 });
 
 /*~~~~~~~~~~~~~~~ DARK LIGHT THEME ~~~~~~~~~~~~~~~*/
-const themeToggle = document.getElementById("theme-toggle");
-const sliderCircle = document.getElementById("slider-circle");
-const sliderIcon = document.getElementById("slider-icon");
+var themeToggle = document.getElementById("theme-toggle");
+var sliderCircle = document.getElementById("slider-circle");
+var sliderIcon = document.getElementById("slider-icon");
 
-const themeToggle2 = document.getElementById("theme-toggle-2");
-const sliderCircle2 = document.getElementById("slider-circle-2");
-const sliderIcon2 = document.getElementById("slider-icon-2");
+var themeToggle2 = document.getElementById("theme-toggle-2");
+var sliderCircle2 = document.getElementById("slider-circle-2");
+var sliderIcon2 = document.getElementById("slider-icon-2");
 
 let isDark = localStorage.getItem("theme") === "dark";
 
@@ -204,7 +204,3 @@ sr.reveal(".about__image", { origin: "bottom" });
 sr.reveal(".about__content", { origin: "top" });
 
 sr.reveal(".menu__items", { origin: "left" });
-
-// sr.reveal(".customer__review",{origin: "left"});
-
-// sr.reveal(".footer",{origin: "bottom"});
