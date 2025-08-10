@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap");
 
 @import "tailwindcss";
-
 
 @theme {
   /*  color*/
   --color-primary: #010a5e;
   --color-primary-light: #010d78;
-  --color-secondary: #FFCC00;
+  --color-secondary: #ffcc00;
   --color-paragraph: #c0c0c0;
   --color-white: #fff;
   --color-black: #000;
@@ -26,8 +24,7 @@
   --font-oswald: "Oswald", sans-serif;
   --font-dmsans: "DM Sans", sans-serif;
 
-
-    /* screens*/
+  /* screens*/
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;

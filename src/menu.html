@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--  Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./mystyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <title>Menu</title>
+  </head>
+  <body class="font-dmsans ">
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header id="header" class=" dark-header fixed top-0 right-0 left-0 z-50 bg-primary-light pt-1">
+      <nav class="relative h-14 flex justify-between items-center w-[90%] mx-auto">
+        <div><a href="#" class="text-3xl uppercase font-oswald">
+          bur<span class="text-secondary ">ger</span></div>
+        </a>
+        <div class="dark-menu absolute top-0 left-0 w-full py-14  border-b border-secondary 
+          hidden md:block md:static md:py=0 md:border-none md:w-auto md:ml-auto md:bg-transparent md:p-0 md:justify-center" id="menudiv"> 
+          <ul class="flex flex-col text-center gap-5 md:flex-row ">
+            <li><a href="index.html"  class=" nav__link  hover:text-secondary  duration-200">Home</a></li>
+            <li><a href="#menu"  class=" nav__link text-secondary hover:text-secondary duration-200 transition-all" >Menu</a></li>
+            <li><a href="#contact" class=" nav__link hover:text-secondary duration-200">Contact</a></li>
+
+            <li class="hidden md:inline-block"  >
+              <div id="theme-toggle" class="w-14 h-7 bg-gray-300 dark:bg-gray-700 rounded-full relative cursor-pointer transition-colors duration-300">
+                <div id="slider-circle" class="w-7 h-7 bg-secondary  rounded-full shadow-md absolute left-0 top-0 flex items-center justify-center transition-all duration-300">
+                  <i id="slider-icon" class="ri-moon-line text-black text-lg transition-all duration-300"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden" id="close-icon">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-5">
+          <!-- <i class="ri-moon-line cursor-pointer ml-12 text-xl px-2 py-1 rounded-full hover:bg-secondary hover:text-black ease-in duration-200"></i> -->
+          <!-- Toggle Button -->
+          <!-- Theme Toggle -->
+          <div class="inline-block md:hidden" id="nightmood-inmobile">
+              <div id="theme-toggle-2" class="w-14 h-7 bg-gray-300 dark:bg-gray-700 rounded-full relative cursor-pointer transition-colors duration-300">
+                <div id="slider-circle-2" class="w-7 h-7 bg-secondary  rounded-full shadow-md absolute left-0 top-0 flex items-center justify-center transition-all duration-300">
+                  <i id="slider-icon-2" class="ri-moon-line text-black text-lg transition-all duration-300"></i>
+                </div>
+              </div>
+          </div>
+
+          <div id="baricon">
+            <i class="ri-menu-2-line cursor-pointer text-xl md:hidden" id="bar__icon"></i>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+
+    <main>
+      
+
+      <!--~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~-->
+      <section id="menu" class="mt-3 pt-16 pb-4 md:pt-20">
+        <div class="w-[90%] mx-auto">
+          <div class="max-w-md mx-auto text-center">
+            <h2 class="text-2xl font-oswald font-bold uppercase lg:text-2xl">OUR BEST MENU</h2>
+            <div class="w-28 h-[2px] bg-secondary my-5 mx-auto md:mx-0 md:w-[90%]"></div>
+            <p class="text-paragraph text-shadow-2xs leading-5">
+              Discover our delicious selection crafted to satisfy every craving.
+              From juicy burgers to crispy snacks and refreshing beverages — we've got it all!
+            </p>
+            <div class="tabs__menu">
+              <ul class="flex flex-wrap justify-center gap-3 py-10 md:flex-nowrap">
+                <li data-tabs="all" class="inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                    rounded-md ease-linear duration-200 bg-primary-light active dark-menue dark-item">All</li>
+                <li data-tabs="food" class="inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                    rounded-md ease-linear duration-200 bg-primary-light dark-menue dark-item">Food</li>
+                <li data-tabs="snack" class="inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                    rounded-md ease-linear duration-200 bg-primary-light dark-menue dark-item">Snack</li>
+                <li data-tabs="sauces" class="inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                    rounded-md ease-linear duration-200 bg-primary-light dark-menue dark-item">Sauces</li>
+                <li data-tabs="desserts" class="inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                    rounded-md ease-linear duration-200 bg-primary-light dark-menue dark-item">Desserts</li>
+                <li data-tabs="bverage" class="inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                    rounded-md ease-linear duration-200 bg-primary-light dark-menue dark-item">Beverages</li>
+              </ul>
+            </div>
+          </div>
+
+            <div class="menu__items mb-10">
+              <div class="">
+                <!-- Food -->
+                 <h1 class="item-menu food text-secondary text-3xl font-bold text-center my-10">Burger Sandwiches</h1>
+                  <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+                  <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/burger-1.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">REGULAR BEEF BURGER</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Juicy grilled beef patty topped with fresh lettuce, tomato, and our special sauce.</p>
+                    </div>
+                    <p class="text-secondary">$42.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/burger-2.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">CHEESE BEEF BURGER</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Succulent beef patty melted cheese and sweet caramelized onions,lettuce and a tangy sauce.</p>
+                    </div>
+                    <p class="text-secondary">$50.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/burger-3.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">MUSHROOM SWISS BURGER</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Juicy beef patty with sautéed mushrooms and melted cheese, greens and creamy garlic sauce.</p>
+                    </div>
+                    <p class="text-secondary">$45.50</p>
+                  </div>
+                </li>
+
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/burger-4.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">CRISPY CHICKEN BURGER</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">fried chicken breast topped with crunchy pickles, lettuce, spicy mayo, soft toasted bun.</p>
+                    </div>
+                    <p class="text-secondary">$39.00</p>
+                  </div>
+                </li>
+      
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/burger-5.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">CRISPY CHICKEN BURGER</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">fried chicken breast topped with crunchy pickles, lettuce, spicy mayo, soft toasted bun.</p>
+                    </div>
+                    <p class="text-secondary">$39.00</p>
+                  </div>
+                </li>
+                
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/b1.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Shiitake Mushroom</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Sautéed mushroom, cheddar cheese, and creamy mayonnaise spread on top of our pure beef burger..</p>
+                    </div>
+                    <p class="text-secondary">$50.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/b2.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Bacon Mushroom Jack</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Beef bacon with fresh sautéed mushroom, cheddar cheese, and creamy mayonnaise.</p>
+                    </div>
+                    <p class="text-secondary">$45.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu food bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/b3.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Old School</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Pure beef burger patty, topped with our signature Buffalo sauce and cheddar cheese.</p>
+                    </div>
+                    <p class="text-secondary">$48.00</p>
+                  </div>
+                </li>
+                  </ul>
+                <!-- Snack -->
+                 <h1 class="item-menu snack text-secondary text-3xl font-bold text-center my-10">Appetizers</h1>
+                  <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 mt-5">
+                  <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/snack-1.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">FRENCH FRIES</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Crispy golden fries seasoned to perfection, a perfect side to complement your meal.</p>
+                    </div>
+                    <p class="text-secondary">$10.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/snack-2.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">FRENCH FRIES WITH SAUCES</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Crispy golden fries seasoned with sea salt and served with your choice of tangy ketchup or creamy garlic aioli.</p>
+                    </div>
+                    <p class="text-secondary">$15.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/snack-3.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">TOASTED SANDWICH</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Golden toasted bread filled with your choice of fresh ingredients — cheese, veggies, and savory sauces — perfect for a quick and tasty bite.</p>
+                    </div>
+                    <p class="text-secondary">$25.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/snack-4.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">POTATO CHIPS</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Crispy and crunchy thinly sliced potato chips, lightly salted for the perfect snack anytime.</p>
+                    </div>
+                    <p class="text-secondary">$12.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/pngegg.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">SPICY DICED POTATOES</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Crispy golden potato cubes tossed in a spicy seasoning blend, perfect for those who love a flavorful kick.</p>
+                    </div>
+                    <p class="text-secondary">$18.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/pngegg (1).png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">CRISPY CHICKEN STRIPS</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Tender chicken strips coated in a crispy golden batter, served with your choice of dipping sauces.</p>
+                    </div>
+                    <p class="text-secondary">$35.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/s3.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Fried Buffalo Wings</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Fried Wings Served with Ranch Sauce or Wings Sauce</p>
+                    </div>
+                    <p class="text-secondary">$38.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu snack bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/s4.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Mozzarella Bites</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Served with Ranch sauce</p>
+                    </div>
+                    <p class="text-secondary">$30.00</p>
+                  </div>
+                </li>
+                  </ul>
+                <!-- sauses -->
+                  <h1 class="item-menu sauces text-secondary text-3xl font-bold text-center my-10">Sauces</h1>
+                  <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 mt-5">
+                    <li class="item-menu sauces bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                    <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                      <img src="../img/ss1.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                    </div>
+                    <div class="pt-5">
+                      <div class="mb-2">
+                        <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Mustard Cup</h4>
+                      </div>
+                      <p class="text-secondary">$9.00</p>
+                    </div>
+                  </li>
+                  <li class="item-menu sauces bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                    <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                      <img src="../img/ss2.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                    </div>
+                    <div class="pt-5">
+                      <div class="mb-2">
+                        <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Ketchup</h4>
+                      </div>
+                      <p class="text-secondary">$5.00</p>
+                    </div>
+                  </li>
+                  <li class="item-menu sauces bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                    <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                      <img src="../img/ss3.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                    </div>
+                    <div class="pt-5">
+                      <div class="mb-2">
+                        <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Cheddar Cheese Sauce</h4>
+                      </div>
+                      <p class="text-secondary">$7.00</p>
+                    </div>
+                  </li>
+                  <li class="item-menu sauces bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                    <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                      <img src="../img/ss4.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                    </div>
+                    <div class="pt-5">
+                      <div class="mb-2">
+                        <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Buffalo Sauce Cup</h4>
+                      </div>
+                      <p class="text-secondary">$10.00</p>
+                    </div>
+                  </li>
+                  <li class="item-menu sauces bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                    <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                      <img src="../img/ss5.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                    </div>
+                    <div class="pt-5">
+                      <div class="mb-2">
+                        <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Mayonnaise Cup</h4>
+                      </div>
+                      <p class="text-secondary">$15.00</p>
+                    </div>
+                  </li>
+                  <li class="item-menu sauces bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                    <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                      <img src="../img/ss5.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                    </div>
+                    <div class="pt-5">
+                      <div class="mb-2">
+                        <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Ranch Sauce Cup</h4>
+                      </div>
+                      <p class="text-secondary">$10.00</p>
+                    </div>
+                  </li>
+                  </ul>
+                <!-- Deserts -->
+                 <h1 class="item-menu desserts text-secondary text-3xl font-bold text-center my-10">Desserts</h1>
+                  <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 mt-5">
+                  <li class="item-menu desserts bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/d1.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Blueberry Cheesecake</h4>
+                    </div>
+                    <p class="text-secondary">$20.00</p>
+                  </div>
+                </li>
+                <li class="item-menu desserts bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/d2.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Lotus Cheesecake</h4>
+                    </div>
+                    <p class="text-secondary">$22.00</p>
+                  </div>
+                </li>
+                <li class="item-menu desserts bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/d3.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Apple Pie</h4>
+                    </div>
+                    <p class="text-secondary">$22.00</p>
+                  </div>
+                </li>
+                <li class="item-menu desserts bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/d4.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Du Pie</h4>
+                    </div>
+                    <p class="text-secondary">$32.00</p>
+                  </div>
+                </li>
+                <li class="item-menu desserts bg-primary-light px-3 pb-3 rounded-md md:h-[260px]">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/d5.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Cookie Slice</h4>
+                    </div>
+                    <p class="text-secondary">$22.00</p>
+                  </div>
+                </li>
+                  </ul>
+                <!-- beverage -->
+                 <h1 class="item-menu bverage text-secondary text-3xl font-bold text-center my-10">Beverage</h1>
+                <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12 mt-5">
+                  <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/Apple-Transparent-1536x1536-1 (1).webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Spero Spatis</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Crisp and refreshing sparkling apple-flavored beverage with a fizzy twist — perfect to brighten your meal.</p>
+                    </div>
+                    <p class="text-secondary">$10.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/OIP1-removebg.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">V Cola</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Refreshing and fizzy classic V cola, the perfect companion to any meal or snack.</p>
+                    </div>
+                    <p class="text-secondary">$15.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/dr4.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">V Cola</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Refreshing and fizzy classic V cola, the perfect companion to any meal or snack.</p>
+                    </div>
+                    <p class="text-secondary">$15.00</p>
+                  </div>
+                </li>
+
+                 <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/beverage-1.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">FRESH LEMON JUICE</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Refreshing freshly squeezed lemon juice, served chilled with a hint of sweetness — perfect to cool you down.</p>
+                    </div>
+                    <p class="text-secondary">$20.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/beverage-2.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">FRUIT PUNCH JUICE</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">A refreshing blend of fresh fruit juices with real fruit chunks, bursting with natural sweetness and vibrant flavors.</p>
+                    </div>
+                    <p class="text-secondary">$25.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/beverage-3.png" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">FRESH STRAWBERRY JUICE</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Sweet and tangy strawberry juice made from fresh, ripe strawberries — a delicious and refreshing treat.</p>
+                    </div>
+                    <p class="text-secondary">$22.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/dr1.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">FRESH ORANGE JUICE</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5">Sweet and tangy freshly squeezed orange juice, packed with vitamin C and bursting with natural flavor.</p>
+                    </div>
+                    <p class="text-secondary">$21.00</p>
+                  </div>
+                </li>
+
+                <li class="item-menu bverage bg-primary-light px-3 pb-3 rounded-md">
+                  <div class="h-56 grid place-items-center bg-primary-light rounded-lg hover:bg-secondary ease-linear duration-200 lg:h-40">
+                    <img src="../img/dr3.webp" alt="food" class="w-40 hover:scale-110  ease-linear  duration-200 md:w-48 lg:w-24">
+                  </div>
+                  <div class="pt-5">
+                    <div class="mb-2">
+                      <h4 class="text-2xl font-oswald font-bold uppercase lg:text-xl">Water Bottle</h4>
+                      <p class="text-paragraph text-shadow-2xs leading-5"></p>
+                    </div>
+                    <p class="text-secondary">$5.00</p>
+                  </div>
+                </li>
+                </ul>
+                
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+      <section id="contact" class="pt-16 pb-16 md:pt-20 bg-secondary py-16">
+        <div class="w-[90%] mx-auto flex flex-col gap-5 md:items-center md:flex-row">
+          <div class="space-y-4 text-center md:flex-1 md:text-start ">
+            <h2 class="text-2xl font-oswald font-bold uppercase lg:text-2xl text-black ">GET EXCLUSIVE UPDATE</h2>
+            <p class="w-[80%] mx-auto md:mx-0 ">Subscribe now to receive the latest news, special offers, and exclusive discounts straight to your inbox.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 md:flex-row md:flex-1">
+            <input type="email" placeholder="Email address" class="p-2 text-black rounded-lg outline-none md:w-full bg-white"> 
+            <a href="" class="flex items-center justify-center gap-2  text-sm py-3 px-8 capitalize text-center cursor-pointer 
+                  rounded-md ease-linear duration-200 bg-black hover:opacity-75">
+              <i class="fa-solid fa-paper-plane"></i>
+              Subscribe
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer>
+      <section class="footer pt-16  md:pt-20 pb-5 bg-primary-light ">
+        <div class="w-[90%] mx-auto">
+          <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid-cols-4 ">
+            <li>
+              <div class="space-y-3">
+                <a href="#" class="text-4xl font-oswald uppercase">
+                  bur<span class="text-secondary">ger</span>
+                </a>
+                <p class="text-xs">At Burger Shop, we believe every bite should be unforgettable. 
+                  From our freshly baked buns to our juicy patties and crisp vegetables, 
+                  every ingredient is chosen with care.
+                </p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="flex flex-col gap-3">
+                <h3 class="text-lg uppercase font-oswald">SUPPORT</h3>
+                <a href="#" class="text-xs hover:text-secondary">FAQ's</a>
+                <a href="#" class="text-xs hover:text-secondary">Privacy Policy</a>
+                <a href="#" class="text-xs hover:text-secondary">Term & Condition</a>
+                <a href="#" class="text-xs hover:text-secondary">Contact</a>
+              </div>
+            </li>
+
+            <li class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">Phone</h3>
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-phone text-lg text-secondary"></i>
+                  +20 110 2874 273
+                </p>
+              </div>
+              <br>
+              <div class="space-y-2 ">
+                <h3 class="text-lg uppercase font-oswald">email</h3>
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-envelope text-lg text-secondary"></i>
+                  burger.shop@email.com
+                </p>
+              </div>
+
+            </li>
+            
+            <li class="space-y-8">
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">address</h3>
+                <p class="flex items-center gap-2 text-xs">
+                  <i class="fa-solid fa-location-dot text-lg text-secondary"></i>
+                  New cairo/Nasr City
+                </p>
+              </div>
+              <br>
+              <div class="space-y-2">
+                <h3 class="text-lg uppercase font-oswald">FOLLOW US</h3>
+                <div class="flex gap-3">
+                  <i class="fa-brands fa-facebook-f text-lg cursor-pointer text-secondary 
+                    hover:-translate-y-1 ease-in duration-200"></i>
+                  <i class="fa-brands fa-twitter text-lg cursor-pointer text-secondary 
+                    hover:-translate-y-1 ease-in duration-200"></i>
+                  <i class="fa-brands fa-square-instagram text-lg cursor-pointer text-secondary 
+                    hover:-translate-y-1 ease-in duration-200"></i>
+                </div>
+              </div>
+
+            </li>
+
+          </ul>
+          <br>
+          <br>
+          <br>
+          <hr class="text-secondary">
+          <div class="flex flex-col items-center py-5 
+                md:flex-row md:justify-between  lg:flex-row lg:justify-between">
+                <p class="text-paragraph text-shadow-2xs leading-5">
+                  &copy; 2025 Burger Shop. All rights reserved. 
+                </p>
+                <p class="text-paragraph text-xs leading-5 text-center">
+                   brcrispy sides, and refreshing drinks — made fresh daily with the finest ingredients.
+                </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+    <a href="#" id="scrol-btn" class=" inline-block fixed right-4 -bottom-1/2 bg-secondary text-black shadow-sm 
+        px-3.5 py-2 rounded-full text-lg z-50 hover:-translate-y-1 ease-in duration-200">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper', {
+      speed: 400,
+      spaceBetween: 30,
+       autoplay: {
+        delay: 3000,
+        disableOnInteraction : false
+      },
+    // If we need pagination
+    pagination: {
+    el: '.swiper-pagination',
+    clickable:true
+    },
+    grabCursor:true,
+    breakpoints: {
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 3,
+    }
+  }
+
+    });
+    </script>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
+    <script src="./main.js"></script>
+  </body>
+</html>
