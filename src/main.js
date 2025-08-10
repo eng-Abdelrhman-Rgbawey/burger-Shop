@@ -28,9 +28,9 @@ closeicon.addEventListener("click", function () {
 /*~~~~~~~~~~~~~~~ TABS ~~~~~~~~~~~~~~~*/
 var all = document.querySelectorAll(".item-menu");
 var foods = document.querySelectorAll(".food");
-var snacks = document.querySelectorAll(".snack"); 
-var sauces = document.querySelectorAll(".sauces"); 
-var desserts = document.querySelectorAll(".desserts"); 
+var snacks = document.querySelectorAll(".snack");
+var sauces = document.querySelectorAll(".sauces");
+var desserts = document.querySelectorAll(".desserts");
 var bverages = document.querySelectorAll(".bverage");
 
 var tabsMenu = document.querySelectorAll(".tabs__menu ul li");
@@ -38,8 +38,8 @@ var tabsMenu = document.querySelectorAll(".tabs__menu ul li");
 function showItems(items) {
   items.forEach((item) => {
     item.style.display = "block";
-    item.classList.remove("animate-left"); // عشان نعيد التشغيل
-    void item.offsetWidth; // إعادة تفعيل الأنيميشن
+    item.classList.remove("animate-left");
+    void item.offsetWidth;
     item.classList.add("animate-left");
   });
 }
@@ -57,20 +57,15 @@ tabsMenu.forEach((tab) => {
 
     if (tabvalue == "food") {
       showItems(foods);
-    } 
-    else if (tabvalue == "snack") {
+    } else if (tabvalue == "snack") {
       showItems(snacks);
-    } 
-    else if (tabvalue == "sauces") {
+    } else if (tabvalue == "sauces") {
       showItems(sauces);
-    } 
-    else if (tabvalue == "desserts") {
+    } else if (tabvalue == "desserts") {
       showItems(desserts);
-    } 
-    else if (tabvalue == "bverage") {
+    } else if (tabvalue == "bverage") {
       showItems(bverages);
-    } 
-    else {
+    } else {
       showItems(all);
     }
   });
@@ -193,26 +188,23 @@ function activeLink() {
 window.addEventListener("scroll", activeLink);
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
 var sr = ScrollReveal({
-  origin: "top" , 
-  distance: "80px" ,
-  duration: 2500 ,
-  dellay: 400
-})
+  origin: "top",
+  distance: "80px",
+  duration: 2500,
+  dellay: 400,
+});
 sr.reveal(".home__image");
-sr.reveal(".home__content",{origin: "bottom"});
-sr.reveal(".category__card",{interval: 300});
+sr.reveal(".home__content", { origin: "bottom" });
+sr.reveal(".category__card", { interval: 300 });
 
-sr.reveal(".promo__card_1",{origin: "top"});
-sr.reveal(".promo__card_2",{origin:"bottom" });
+sr.reveal(".promo__card_1", { origin: "top" });
+sr.reveal(".promo__card_2", { origin: "bottom" });
 
-sr.reveal(".about__image",{origin: "bottom"});
-sr.reveal(".about__content",{origin: "top"});
+sr.reveal(".about__image", { origin: "bottom" });
+sr.reveal(".about__content", { origin: "top" });
 
-sr.reveal(".menu__items",{origin: "left"});
+sr.reveal(".menu__items", { origin: "left" });
 
 // sr.reveal(".customer__review",{origin: "left"});
 
 // sr.reveal(".footer",{origin: "bottom"});
-
-
-
